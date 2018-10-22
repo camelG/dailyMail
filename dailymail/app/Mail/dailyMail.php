@@ -22,8 +22,8 @@ class dailyMail extends Mailable
     public function build()
     {
         return $this->from($this->data['email'])
-                    ->view('mail')
                     ->subject($this->data['title'])
+                    ->view('mail')
                     ->with($this->data);
     }
 }
